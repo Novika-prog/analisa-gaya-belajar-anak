@@ -310,7 +310,7 @@ img.onload = function () {
   doc.setFontSize(20);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(0);
-  doc.text("Laporan Hasil Gaya Belajar Anak", 148.5, 35, { align: "center" });
+  doc.text("Laporan Hasil Gaya Belajar Anak", 148.5, 38, { align: "center" });
 
   // ========== BIODATA ==========
   doc.setFontSize(12);
@@ -338,6 +338,29 @@ img.onload = function () {
   linesArr.forEach((line, i) => {
     doc.text(line, 30, yStart + i * lineHeight);
   });
+  
+  // ========== PEMBATAS ==========
+
+  // QR CODE ==========
+const qrCode = document.getElementById("qrCode");
+if (qrCode) {
+  const qrCodeDataUrl = qrCode.toDataURL("image/png");
+  doc.addImage(qrCodeDataUrl, 'PNG', 240, 165, 30, 30); // QR di atas tanggal
+}
+
+  // ========== TANDA TANGAN ==========
+  doc.setFontSize(12);
+  doc.text("Tanda Tangan Orang Tua/Wali", 30, 180);
+  doc.line(30, 185, 100, 185); // Garis tanda tangan
+
+  // ========== TANGGAL ==========
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString("id-ID", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  doc.text(`Tanggal: ${formattedDate}`, 265, 180, { align: "right" });
 
   // ========== FOOTER ==========
   doc.setFontSize(9);
