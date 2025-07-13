@@ -1,68 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Analisa Gaya Belajar Anak</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1 id="title">Analisa Gaya Belajar Anak</h1>
-      <select id="languageSelector" onchange="changeLanguage(this.value)">
-        <option value="id">🇮🇩 Indonesia</option>
-        <option value="en">🇬🇧 English</option>
-      </select>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisa Gaya Belajar Anak</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Analisa Gaya Belajar Anak</h1>
+    <p>Pilih jawaban yang paling sesuai dengan kebiasaan anak Anda</p>
+  </header>
 
-    <main>
-      <form id="quizForm">
-        <div class="question" data-id="1">
-          <p
-            class="question-text"
-            data-en="My child prefers to learn by:"
-            data-id="Anak saya lebih suka belajar dengan:"
-          ></p>
-          <label
-            ><input type="radio" name="q1" value="visual" />
-            <span
-              data-en="Seeing pictures or colors"
-              data-id="Melihat gambar atau warna"
-            ></span
-          ></label>
-          <label
-            ><input type="radio" name="q1" value="auditory" />
-            <span
-              data-en="Listening to stories or sounds"
-              data-id="Mendengarkan cerita atau suara"
-            ></span
-          ></label>
-          <label
-            ><input type="radio" name="q1" value="kinesthetic" />
-            <span
-              data-en="Touching and moving objects"
-              data-id="Menyentuh dan memindahkan benda"
-            ></span
-          ></label>
-        </div>
+  <main>
+    <form id="quizForm"></form>
 
-        <!-- Tambahkan lebih banyak pertanyaan di sini -->
+    <div id="result" style="display:none;">
+      <h2>Hasil Gaya Belajar Anak</h2>
+      <p id="resultText"></p>
+      <button id="downloadBtn">Download PDF</button>
+    </div>
+  </main>
 
-        <button type="submit" id="submitBtn">Lihat Hasil</button>
-      </form>
+  <footer>
+    <p>&copy; 2025 Gaya Belajar Anak</p>
+  </footer>
 
-      <section id="resultSection" class="hidden">
-        <h2 id="resultTitle">Hasil Analisis</h2>
-        <div id="resultOutput"></div>
-        <canvas id="resultChart"></canvas>
-      </section>
-    </main>
-
-    <footer>
-      <p>© 2025 AnakCerdas</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>

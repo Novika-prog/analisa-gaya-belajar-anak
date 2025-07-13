@@ -1,4 +1,3 @@
-// script.js
 const questions = [
   {
     text: "Saat belajar, anak Anda lebih suka...",
@@ -15,8 +14,7 @@ const questions = [
       { text: "Bernyanyi atau ngobrol", type: "auditory" },
       { text: "Berlari atau memegang benda", type: "kinesthetic" },
     ],
-  },
-  // Tambahkan pertanyaan lain sesuai kebutuhan
+  }
 ];
 
 const quizForm = document.getElementById("quizForm");
@@ -73,7 +71,6 @@ quizForm.addEventListener("submit", function (e) {
   resultDiv.style.display = "block";
 });
 
-// Generate PDF
 downloadBtn.addEventListener("click", function () {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
@@ -83,5 +80,4 @@ downloadBtn.addEventListener("click", function () {
   doc.save("hasil-gaya-belajar-anak.pdf");
 });
 
-// Load pertanyaan saat halaman dibuka
 renderQuestions();
