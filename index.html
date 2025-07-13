@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Analisa Gaya Belajar Anak</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Analisa Gaya Belajar Anak</h1>
-    <p>Pilih jawaban yang paling sesuai dengan kebiasaan anak Anda</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analisa Gaya Belajar Anak</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Analisa Gaya Belajar Anak</h1>
+      <p>Pilih jawaban yang paling sesuai dengan kebiasaan anak Anda</p>
+    </header>
 
-  <main>
-    <form id="quizForm"></form>
+    <main>
+      <form id="quizForm">
+        <div class="biodata">
+          <div class="form-row">
+            <label for="childName">Nama Anak:</label>
+            <input
+              type="text"
+              id="childName"
+              name="childName"
+              required
+              placeholder="KETIK NAMA MENGGUNAKAN HURUF BALOK"
+            />
+          </div>
 
-    <div id="result" style="display:none;">
-      <h2>Hasil Gaya Belajar Anak</h2>
-      <p id="resultText"></p>
-      <button id="downloadBtn">Download PDF</button>
-    </div>
-  </main>
+          <div class="form-row">
+            <label for="childDOB">Tanggal Lahir:</label>
+            <input type="date" id="childDOB" name="childDOB" required />
+          </div>
+        </div>
+      </form>
 
-  <footer>
-    <p>&copy; 2025 Gaya Belajar Anak</p>
-  </footer>
+      <div id="result" style="display: none">
+        <h2>Hasil Gaya Belajar Anak</h2>
+        <p id="resultText"></p>
+        <button id="downloadBtn" type="button">Download PDF</button>
+      </div>
+    </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2025 Gaya Belajar Anak</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

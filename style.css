@@ -1,64 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Comic Neue', cursive;
   margin: 0;
   padding: 20px;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f5f7fa;
+  color: #444;
 }
 
 header, footer {
   text-align: center;
+  background-color: #e3f2fd;
   padding: 1em 0;
-  background-color: #cbe4ff;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  color: #004085;
+  color: #1976d2;
+  font-size: 2rem;
 }
 
 form {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .question-block {
   background-color: #ffffff;
-  padding: 16px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 6px solid #90caf9;
+  transition: transform 0.2s ease;
+}
+
+.question-block:hover {
+  transform: scale(1.01);
 }
 
 .question-block h3 {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  color: #333;
 }
 
 label {
   display: block;
-  margin: 4px 0;
+  margin: 8px 0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+label:hover {
+  background-color: #e8f0fe;
+  border: 1px solid #90caf9;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
 }
 
 button {
-  margin-top: 16px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #007bff;
+  display: block;
+  margin: 20px auto;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  background-color: #64b5f6;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #42a5f5;
 }
 
 #result {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 16px;
-  background-color: #e2f0d9;
-  border: 1px solid #9ccc65;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff3e0;
+  border-left: 8px solid #ffb74d;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  white-space: pre-wrap;
+  color: #5d4037;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  width: 150px; /* Tetapkan lebar label supaya sejajar */
+  font-weight: bold;
+  color: #333;
+}
+
+.form-row input {
+  flex: 1; /* Input akan memenuhi ruang sisa */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
 }
